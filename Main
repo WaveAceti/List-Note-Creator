@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class GuiltList implements Serializable {
 
-//////ATTRIBUTES??????
+//////ATTRIBUTES//////
   private static LinkedList<User> users = new LinkedList<User>();
 
 public static User searchUsers(String email) {
