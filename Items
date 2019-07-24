@@ -1,0 +1,37 @@
+package guiltlist
+
+import java.io.Serializable;
+import java.util.*;
+
+public abstract class Items implements Serializable {
+
+//    static void setReminder(String reminderDate) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+    
+    
+    protected static int nextId = 1;
+    protected int itemId;
+    protected String title;
+    protected boolean sharing = false;
+    protected Date reminderDate;
+    protected Date reminderTime; 
+    protected boolean pin = false;
+    
+      
+    //this get method is to get the linkedlist items onto the jlist within the main page
+    
+    public static int getNextId() {return nextId;}
+    public static void setNextId(int i) { nextId=i;}
+    public String getTitle() { return title; }
+    public boolean getSharing() { return sharing; }
+    public void updateSharing(){sharing = true;}
+    public boolean getPin(){return pin; }
+    public int getId() { return itemId; }
+    //public void String setTitle(String e){ title=e;}
+    public void setTitle(String newTitle){ title = newTitle; }   
+    public String toString() { 
+        return itemId + "," + title + (sharing?",Shared ":",Not Shared"); 
+    }
+    
+}
