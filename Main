@@ -62,28 +62,12 @@ public static LinkedList<User> getUserList() {
     }
 public static void main(String[] args) {
             GuiltList gs = new GuiltList();
-//            Scanner    s1 = null;
-//        try {
-//            File f1 = new File("users.txt");
-//            s1 = new Scanner(f1);
-//            
-//            while(s1.hasNextLine()) {
-//                String line = s1.nextLine();
-//                String[] cInfo = line.split(",");
-//                gs.addUsers(cInfo[0], cInfo[1], cInfo[2]);         
-//            }
-//         } catch (IOException ioe) {     
-//		System.out.println(ioe.toString());       
-//         }  finally  {    
-//            if (s1 != null)  s1.close(); 
-//        }
+
             
             try {
             FileInputStream fos = new FileInputStream("gl.dat");
             ObjectInputStream oos = new ObjectInputStream(fos);
             
-//            oos.writeObject(RentalSystem.getCustomers());
-//            oos.writeObject(RentalSystem.getItems());
             
             LinkedList<User> users = (LinkedList<User>)(oos.readObject());
             int iId = (Integer)(oos.readObject());
