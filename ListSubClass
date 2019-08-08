@@ -24,7 +24,6 @@ public class List extends Complex {
         itemId = nextId; nextId++;
                         
       }    
-    //public List() {}
     
     @Override
     public String toString(){
