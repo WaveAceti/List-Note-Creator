@@ -1,15 +1,10 @@
 package guiltlist;
 
 
-//import java.util.Date;
-//import java.util.Time;
 import java.util.Date;
 import java.util.LinkedList;
 
-/**
- *
- * @author danielgomez
- */
+
 public abstract class Complex extends Items {
 
 protected LinkedList<Task> tasks = new LinkedList<Task>();
